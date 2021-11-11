@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import './variables.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: $bg_dark;
+  &:before{
+    content:'';
+    content: "";
+    width: 100%;
+    height: 100vh;
+
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.text-shadow{
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post{
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+  }
+  &:hover{
+    & .arrow-btn{
+      width: 60px;
+    }
+  }
+}
+
+.react-multi-carousel-list {
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+    &:hover{
+      width: 60px;
+    }
+  }
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.postCard {
+  background-color: #33435C;
+  border-left: 10px solid #265DB5;
+}
+
+.Categories {
+  background-color: #33435C;
+}
+
+.PostWidget {
+  background-color: #33435C;
+}
+
+.About {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../assets/ryoji-iwata-IBaVuZsJJTo-unsplash-2.jpg');
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgb(126,126,129);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.479) 0%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+  }
+
+  h2 {
+    position: relative;
+
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  p {
+    position: relative;
+    background-color: rgb(85, 84, 84);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    width: 50%;
+
+    span {
+      color: #2c78f1;
+      font-weight: 600;
+    }
+  }
+
+  button {
+    position: relative;
+
+    border: 1px solid white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin-top: 30px;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: white;
+      color:#0563FA;
+    }
+  }
+}
